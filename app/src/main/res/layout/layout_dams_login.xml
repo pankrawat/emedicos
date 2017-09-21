@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/dp5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_refcode_et">
+
+        <EditText
+            android:id="@+id/damstokenET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/token"
+            android:drawablePadding="17dp"
+            android:hint="@string/dams_roll_no"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/til2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til1"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/bg_refcode_et">
+
+
+        <EditText
+            android:id="@+id/damspassET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/lock"
+            android:drawablePadding="17dp"
+            android:hint="DAMS Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_signup_btn"
+        android:elevation="4dp"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+</LinearLayout>

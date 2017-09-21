@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/feeds_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/blue"
+                    android:fitsSystemWindows="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/titleRL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true">
+
+                            <TextView
+                                android:id="@+id/toolbartitleTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/dp5"
+                                android:paddingRight="@dimen/dp5"
+                                android:text="Saved Notes"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/heading_text_size" />
+
+                            <TextView
+                                android:id="@+id/toolbarsubtitleTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/toolbartitleTV"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/dp5"
+                                android:paddingRight="@dimen/dp5"
+                                android:text="Saved Notes"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/extrasmall_text_size"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.SearchView
+                            android:id="@+id/searchSV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/imageIV"
+                            android:queryHint="Search here"
+                            android:src="@mipmap/search"
+                            android:theme="@style/Custom.Searching" />
+
+                        <ImageView
+                            android:id="@+id/imageIV"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/normal_button_padding_left_right"
+                            android:src="@mipmap/bell_white" />
+
+                        <TextView
+                            android:id="@+id/notifyTV"
+                            android:layout_width="@dimen/dp12"
+                            android:layout_height="@dimen/dp12"
+                            android:layout_alignBottom="@+id/imageIV"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dp16"
+                            android:layout_marginRight="@dimen/dp25"
+                            android:background="@drawable/round_bg"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/extramini_extrasmall_text_size"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/content_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

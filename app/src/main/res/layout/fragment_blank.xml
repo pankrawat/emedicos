@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+      <com.emedicoz.app.views.TouchImageView
+          android:id="@+id/imageIV"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="matrix"
+          android:src="@drawable/splashbg" />
+  <!--  <com.emedicoz.app.views.ZoomableImageView
+        android:id="@+id/imageIV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/bg" />-->
+
+
+</FrameLayout>

@@ -1,0 +1,249 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        tools:context="com.emedicoz.app.Login.Fragment.SignUp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/user"
+                android:drawablePadding="17dp"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingTop="2dp"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/emailTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/email"
+                android:drawablePadding="17dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingTop="2dp"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/phonenumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/phone"
+                android:drawablePadding="17dp"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingTop="2dp"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/passwordET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/lock"
+                android:drawablePadding="17dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingTop="2dp"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/damsidCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:padding="2dp"
+            android:text="@string/are_you_a_dams_student"
+            android:visibility="gone" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/damsidET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="17dp"
+                android:enabled="false"
+                android:hint="@string/enter_your_dams_roll_number"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/referralET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_refcode_et"
+            android:drawablePadding="17dp"
+            android:gravity="center"
+            android:hint="@string/signup_referralcode"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/normal_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_signup_btn"
+            android:elevation="4dp"
+            android:paddingLeft="@dimen/normal_button_padding_left_right"
+            android:paddingRight="@dimen/normal_button_padding_left_right"
+            android:text="@string/signup"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/already_have_an_account" />
+
+            <TextView
+                android:id="@+id/loginTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Log in"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:src="@mipmap/line"-->
+        <!--android:id="@+id/imageView" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blackline_or" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="OR"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blackline_or"
+                android:rotation="180" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp25"
+            android:text="@string/sign_up_with_social_media"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/dp25"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="@dimen/dp30">
+
+            <ImageView
+                android:id="@+id/fbIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@mipmap/facebook" />
+
+            <ImageView
+                android:id="@+id/gpIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@mipmap/gplus" />
+
+            <ImageView
+                android:id="@+id/inIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@mipmap/in" />
+
+            <ImageView
+                android:id="@+id/damsIV"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@drawable/dams" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

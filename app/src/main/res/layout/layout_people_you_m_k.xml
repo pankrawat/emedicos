@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/peopleknownTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_button_padding_left_right"
+        android:text="@string/people_you_may_know"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/peopleknownViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/normal_button_padding_left_right"
+        android:layout_marginRight="@dimen/normal_button_padding_left_right"
+        android:gravity="right"
+        android:text="@string/viewAll"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/advertismentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/peopleknownTV1"
+        android:layout_marginLeft="@dimen/normal_button_padding_left_right"
+        android:text="@string/people_you_may_know"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/peopleCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/advertismentText"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp5"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@id/imageIV"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/helpbanner"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/peopleRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

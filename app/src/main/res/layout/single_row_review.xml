@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp10">
+
+    <RatingBar
+        android:id="@+id/ratingRB"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3" />
+
+    <RelativeLayout
+        android:id="@+id/RL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingRB"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp2"
+            android:text="Vipul Kumar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_heading_text_size" />
+
+        <TextView
+            android:id="@+id/timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_toRightOf="@+id/nameTV"
+            android:padding="@dimen/dp2"
+            android:text="18 hours ago, 6:20 pm"
+            android:textSize="@dimen/extrasmall_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL"
+        android:alpha="0.6"
+        android:padding="@dimen/dp2"
+        android:text="Course Name zldkjvnzlksjn zlsdkjvnslkdn alskdvnasldkn lksnalk lsdkvnzslkdn lkjvnzlsdkn lksndlaskn "
+        android:textColor="@color/black"
+        android:textSize="@dimen/post_text_size" />
+
+</RelativeLayout>

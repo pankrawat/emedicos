@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/editIM"
+        android:title="Edit"
+        android:visible="false"
+        app:showAsAction="collapseActionView"></item>
+
+    <item
+        android:id="@+id/deleteIM"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="collapseActionView"></item>
+
+    <item
+        android:id="@+id/reportIM"
+        android:title="Report"
+        app:showAsAction="collapseActionView"></item>
+</menu>

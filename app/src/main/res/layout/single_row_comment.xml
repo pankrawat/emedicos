@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp5"
+    android:padding="3dp"
+    card_view:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp">
+
+        <RelativeLayout
+            android:id="@+id/imageRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp5"
+            android:paddingTop="@dimen/dp5">
+
+            <com.emedicoz.app.views.CircleImageView
+                android:id="@+id/imageIV"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:src="@mipmap/default_pic" />
+
+            <ImageView
+                android:id="@+id/ImageIVText"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:src="@mipmap/default_pic" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/writecommentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imageRL"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!--  <EditText
+                  android:id="@+id/writecommentET"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="4"
+                  android:hint="Write your comment here"
+                  android:maxHeight="100dp"
+                  android:textSize="13sp" />-->
+
+            <EditText
+                android:id="@+id/writecommentET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Write your comment here"
+                android:maxHeight="100dp"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/postcommentIBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/send" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showcommentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/imageRL"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Robin Kumar"
+                android:textSize="@dimen/post_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/commentTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="commted that you are are a good person"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="24th june, 2017"
+                android:textSize="@dimen/extrasmall_text_size"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/moreoptionIV"
+            android:layout_width="30dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/option" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp2"
+    android:layout_marginTop="@dimen/dp2"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/normal_button_padding_left_right"
+    android:paddingLeft="@dimen/dp5"
+    android:paddingRight="@dimen/dp5"
+    android:paddingTop="@dimen/normal_button_padding_left_right">
+
+    <FrameLayout
+        android:id="@+id/followBtnRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp5">
+
+        <Button
+            android:id="@+id/followBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:background="@drawable/reg_round_blue_bg"
+            android:paddingLeft="@dimen/normal_button_padding_left_right"
+            android:paddingRight="@dimen/normal_button_padding_left_right"
+            android:text="Following"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+        <!--  <Button
+          android:id="@+id/followBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:paddingLeft="@dimen/normal_button_padding_left_right"
+          android:paddingRight="@dimen/normal_button_padding_left_right"
+          android:text="Following"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:visibility="invisible" />-->
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/imageRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.emedicoz.app.views.CircleImageView
+            android:id="@+id/imageIV"
+            android:layout_width="@dimen/medium_image_size"
+            android:layout_height="@dimen/medium_image_size"
+            android:layout_gravity="center"
+            android:src="@mipmap/default_pic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageIVText"
+            android:layout_width="@dimen/medium_image_size"
+            android:layout_height="@dimen/medium_image_size"
+            android:layout_gravity="center"
+            android:src="@mipmap/default_pic" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/followBtnRL"
+        android:layout_toRightOf="@id/imageRL"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/dp5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size" />
+
+</RelativeLayout>

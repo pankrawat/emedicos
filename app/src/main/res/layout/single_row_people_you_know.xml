@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="@dimen/large_image_size"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dp2"
+              android:layout_marginLeft="@dimen/dp5"
+              android:layout_marginTop="@dimen/dp5"
+              android:orientation="vertical">
+
+    <com.emedicoz.app.views.CircleImageView
+        android:id="@+id/imageIV"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:src="@mipmap/default_pic"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageIVText"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:src="@mipmap/default_pic"/>
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp3"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="2dp"
+        android:text="asdgsdfsdfdfgd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/extrasmall_text_size"/>
+
+    <Button
+        android:id="@+id/followBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp25"
+        android:layout_margin="@dimen/dp5"
+        android:background="@drawable/reg_round_blue_bg"
+        android:padding="@dimen/dp3"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="Follow"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/extrasmall_text_size"/>
+
+</LinearLayout>

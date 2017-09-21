@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parentSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextBtn">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/circle_image_FL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <com.emedicoz.app.views.CircleImageView
+                    android:id="@+id/cirle_image"
+                    android:layout_width="@dimen/dp120"
+                    android:layout_height="@dimen/dp120"
+                    android:src="@mipmap/default_pic" />
+
+                <ImageView
+                    android:id="@+id/cirle_imageText"
+                    android:layout_width="@dimen/dp120"
+                    android:layout_height="@dimen/dp120"
+                    android:src="@mipmap/default_pic" />
+
+                <ImageView
+                    android:id="@+id/editimage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="70dp"
+                    android:background="#00ffffff"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:src="@mipmap/camera" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/circle_image_FL"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@mipmap/user"
+                        android:drawablePadding="17dp"
+                        android:hint="@string/name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingTop="2dp"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/email"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="4dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/phonenumberTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/phone"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Phone number"
+                    android:inputType="number"
+                    android:padding="4dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/damsidTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/token"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Dams Roll Number"
+                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@mipmap/stream" />
+
+                    <Spinner
+                        android:id="@+id/streamSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"></Spinner>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/substreamTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="@dimen/normal_button_padding_left_right"
+                    android:drawableLeft="@mipmap/stream"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Select Sub Stream"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/specialisationTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/specialization"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Select Specialisation"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+
+                <TextView
+                    android:id="@+id/IntcoursesTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/course_interested"
+                    android:drawablePadding="17dp"
+                    android:gravity="center_vertical"
+                    android:hint="Select Courses Interested In"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <CheckBox
+                    android:id="@+id/damsidCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="25dp"
+                    android:padding="2dp"
+                    android:text="@string/are_you_a_dams_student"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/bg_signup_btn"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="@string/save"
+        android:textColor="@color/white" />
+</RelativeLayout>
+
